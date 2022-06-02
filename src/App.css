@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.default-layout{
+  display: grid;
+  grid-template-rows: 105px auto 3rem;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+}
+
+header{
+  grid-area: header;
+}
+
+main{
+  grid-area: main;
+  min-height: 79.6vh;
+}
+
+footer{
+  grid-area: footer;
+  background: black;
+  padding: 1rem;
+  color: white;
+}
