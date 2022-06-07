@@ -13,6 +13,7 @@ export const SearchForm = ({handleOnChange, searchStr}) => {
                     name='searchStr' 
                     value={searchStr}
                     onChange={handleOnChange}
+                    autoComplete='off'
                     placeholder='Search ...'>
                 </Form.Control>
             </Col>

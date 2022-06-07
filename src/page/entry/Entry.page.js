@@ -55,6 +55,7 @@ export const Entry = () => {
             {frmLoad === 'reset' &&
                 <PasswordReset className='form-box' 
                     handleOnChange={handleOnChange}
+                    handleOnSubmit={handleOnResetSubmit}
                     handleOnResetSubmit={handleOnResetSubmit}
                     frmSwitch={frmSwitch}
                     email={email}

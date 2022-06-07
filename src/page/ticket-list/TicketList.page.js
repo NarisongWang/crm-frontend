@@ -1,17 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import { PageBreadcrumb } from '../../component/breadcrumb/Breadcrumb.comp'
 import { TicketTable } from '../../component/ticket-table/TicketTable.comp'
 import tickets from '../../assets/data/dummy-tickets.json'
 import { SearchForm } from '../../component/search-form/SearchForm.comp'
+import { Link } from 'react-router-dom'
 
 export const TicketList = () => {
 
     const [searchStr, setSearchStr] = useState('');
     const [dispTicket, setDispTicket] = useState(tickets);
-
-    useEffect(() => {
-    }, [searchStr,dispTicket]);
 
     const handleOnChange =(e)=>{
         e.preventDefault();
@@ -31,7 +29,9 @@ export const TicketList = () => {
         </Row>
         <Row>
             <Col className='text-center mt-1 mb-3'>
-                <Button variant='info' style={{fontSize:'1.3rem','color':'white', padding:'10px 30px'}}>Add New Ticket</Button>
+                <Link to="/addticket">
+                    <Button variant='info' style={{fontSize:'1.3rem','color':'white', padding:'10px 30px'}}>Add New Ticket</Button>
+                </Link>
             </Col>
             <Col className='text-right mt-3'>
                 <SearchForm 
